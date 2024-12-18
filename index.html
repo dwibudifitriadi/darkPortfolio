@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" id="targetdarkmode" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Template</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,100..900;1,100..900&family=DM+Mono&family=Parisienne&family=Playwrite+AU+VIC+Guides&family=Playwrite+NO+Guides&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        .blob {
+            animation-name: blobby;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            animation-direction: alternate;
+            mix-blend-mode: luminosity;
+        }
+
+        @keyframes blobby {
+            0% {
+                border-radius: 50%;
+            }
+
+            10% {
+                border-radius: 41% 59% 33% 67% / 57% 60% 40% 43%;
+            }
+
+            20% {
+                border-radius: 48% 52% 41% 59% / 52% 65% 35% 48%;
+            }
+
+            30% {
+                border-radius: 51% 49% 45% 55% / 55% 62% 38% 45%;
+            }
+
+            40% {
+                border-radius: 43% 57% 41% 59% / 53% 52% 48% 47%;
+            }
+
+            50% {
+                border-radius: 64% 36% 68% 32% / 40% 70% 30% 60%;
+            }
+
+            60% {
+                border-radius: 55% 45% 53% 47% / 45% 60% 40% 55%;
+            }
+
+            70% {
+                border-radius: 41% 59% 33% 67% / 57% 60% 40% 43%;
+            }
+
+            80% {
+                border-radius: 48% 52% 41% 59% / 48% 58% 42% 52%;
+            }
+
+            100% {
+                border-radius: 54% 46% 60% 40% / 43% 55% 45% 57%;
+            }
+        }
+
+        .nav-active {
+            /* background-color: #1f2937; */
+            color: #38bdf8;
+        }
+    </style>
+
+</head>
+
+<body class="bg-gray-900 dark:bg-gray-950">
+
+    <nav id="navbar"
+        class="fixed md:hidden font-outfit text-slate-400 p-2  md:top-1 md:sticky bottom-0 inset-x-0  border-t-2 bg-gray-800 border-solid   dark:bg-slate-900 border-slate-300 z-30">
+        <div class="flex justify-between items-center">
+            <div class="flex-shrink-0 border-r-2 border-solid px-3 border-slate-300">
+                <div class="relative inline-block text-white font-bold text-xl">
+                    <span class="absolute top-0 -left-0.5 text-red-500 first-letter:text-cyan-500">D</span>
+                    <span class="relative inline-block first-letter:text-red-500">
+                        Dwi
+                    </span>
+                </div>
+
+            </div>
+            <div class="flex-1 scrollbar-hide overflow-x-auto dark:text-slate-300">
+                <div class="flex space-x-4 pl-3">
+                    <a href="#home" class="p-3 md:p-4 md:hidden active-link">Home</a>
+                    <a href="#home" class="p-3 md:p-4 md:block hidden font-dancingscript active-link">HelloPipit</a>
+                    <a href="#project" class="p-3 md:p-4 ">Project</a>
+                    <a href="#timeline" class="p-3 md:p-4">Timeline</a>
+                    <a href="#about" class="p-3 md:p-4">About</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="relative flex justify-end">
+        <label id="toggle-bg"
+            class="absolute top-5 right-5 inline-block h-7 w-[48px] cursor-pointer rounded-full bg-gray-800 shadow-sm shadow-gray-300 transition [-webkit-tap-highlight-color:_transparent]">
+            <input type="checkbox" id="darkmode" class="peer sr-only" />
+            <span id="toggle-circle"
+                class="absolute inset-y-0 start-0 m-1 size-5 rounded-full bg-white ring-[5px] ring-inset ring-white transition-all peer-checked:translate-x-full peer-checked:bg-gray-700">
+            </span>
+        </label>
+    </div>
+
+
+    <div class="flex flex-col md:flex-row h-screen">
+        <aside class="hidden md:flex fixed z-10">
+            <div class="h-screen overflow-y-auto bg-gray-800 sm:w-44 dark:bg-gray-900 dark:border-gray-700">
+                <div class="font-outfit py-8 flex justify-center bg-black border-b border-gray-600">
+                    <div class="flex flex-col items-center text-center text-white font-bold text-7xl">
+                        <div class="relative inline-block">
+                            <span class="absolute top-0 -left-1.5 text-red-500 first-letter:text-cyan-500">D</span>
+                            <span class="relative inline-block first-letter:text-red-500">D</span>
+                        </div>
+                        <h1 class="text-gray-200 text-xl ">Dwi</h1>
+                    </div>
+                </div>
+                <div class="text-center text-gray-400">
+                    <a href="#home" id="nav-home" class="p-3 md:p-4 block border-b border-gray-700">Home</a>
+                    <a href="#project" id="nav-project" class="p-3 md:p-4 block border-b border-gray-700">Project</a>
+                    <a href="#timeline" id="nav-timeline" class="p-3 md:p-4 block border-b border-gray-700">Timeline</a>
+                    <a href="#about" id="nav-about" class="p-3 md:p-4 block border-b border-gray-700">About</a>
+                    <div class="mt-4">
+                        <a href="https://www.youtube.com/@dwibudifitriadi"
+                            class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-youtube w-5 text-xl'></i>
+                        </a>
+
+                        <a href="https://www.github.com/dwibudifitriadi"
+                            class="p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-github w-5  fill-current text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <div class="flex-grow md:ml-64 md:mr-20 text-white mx-10 mt-10 h-screen" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-duration="1500" id="home">
+            <span class="font-handwrite block text-lg text-gray-500">&lt;html&gt;</span>
+            <span class="font-handwrite block indent-2 text-lg text-gray-500">&lt;body&gt;</span>
+            <span class="font-handwrite block indent-4 text-lg text-gray-500">&lt;div class="container"&gt;</span>
+            <span class="font-handwrite block indent-6 text-lg text-gray-500 mb-2">&lt;h1&gt;</span>
+            <h1 class="font-outfit font-extrabold text-5xl md:text-7xl">Hi,</h1>
+            <h1 class="font-outfit font-extrabold text-5xl md:text-7xl">
+                I'am
+                <div class="relative inline-block text-white font-bold md:text-7xl">
+                    <span class="absolute -skew-y-6 top-0 -left-0.5 text-red-500 first-letter:text-cyan-500">D</span>
+                    <span class="relative -skew-y-6 inline-block first-letter:text-red-500">Dwi,</span>
+                </div>
+            </h1>
+            <h1 class="font-outfit font-extrabold text-5xl md:text-7xl">
+                web developer
+                <span class="font-handwrite text-lg text-gray-500 font-normal">&lt;/h1&gt;</span>
+            </h1>
+            <span class="font-handwrite text-lg text-gray-500 indent-5 block mt-4">&lt;p&gt;</span>
+            <p class="font-monosans md:text-xl font-normal text-base tracking-wide text-gray-500">
+                Junior Front End Developer
+                <span class="font-handwrite text-lg text-gray-500">&lt;/p&gt;</span>
+            </p>
+            <span class="font-handwrite block indent-6 text-lg text-gray-500 mb-2">&lt;button&gt;</span>
+            <button
+                class="hover:bg-cyan-500 hover:text-gray-800 border-2 py-2 text-lg px-5 border-cyan-500 text-cyan-500 font-normal font-monosans">
+                Contact Me !
+            </button>
+            <span class="font-handwrite block indent-6 mt-2 text-lg text-gray-500 mb-2">&lt;/button&gt;</span>
+            <span class="font-handwrite block indent-4 mt-2 text-lg text-gray-500">&lt;/div&gt;</span>
+        </div>
+    </div>
+    <div class="m-5 md:ml-64 md:mr-20" id="project">
+        <div class="font-outfit text-center">
+            <h1 class="text-gray-200 text-2xl font-bold">Project</h1>
+            <p class="text-gray-200">some collections that I made</p>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 md:grid md:grid-cols-2 lg:grid-cols-3">
+            <div class="border rounded-xl md:col-start-1 md:row-start-1" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                <div
+                    class="aspect-[16/9] rounded-lg m-4 bg-[url('https://signage.uiowa.edu/sites/signage.uiowa.edu/files/slides/1920x1080.jpg')] bg-cover bg-center">
+
+                </div>
+                <div class="m-4">
+                    <div class="flex justify-between">
+                        <h1 class="font-outfit font-bold text-xl text-gray-200 ">Lorem, ipsum.</h1>
+                        <h1 class="font-outfit text-sm text-gray-500 ">11 November 2011</h1>
+                    </div>
+                    <p class="font-outfit text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+                        blanditiis rerum dicta incidunt suscipit esse labore in libero expedita asperiores?</p>
+                    <button
+                        class="bg-cyan-500 items-center flex justify-center w-full rounded-lg p-2 mt-4 font-semibold text-gray-800">Learn
+                        More <i class='bx w-3 h-3 ml-1 bx-right-arrow-alt'></i></button>
+                </div>
+            </div>
+            <div class="border rounded-xl lg:col-start-2 lg:row-start-1" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                <div
+                    class="aspect-[16/9] rounded-lg m-4 bg-[url('https://signage.uiowa.edu/sites/signage.uiowa.edu/files/slides/1920x1080.jpg')] bg-cover bg-center">
+
+                </div>
+                <div class="m-4">
+                    <div class="flex justify-between">
+                        <h1 class="font-outfit font-bold text-xl text-gray-200 ">Lorem, ipsum.</h1>
+                        <h1 class="font-outfit text-sm text-gray-500 ">11 November 2011</h1>
+                    </div>
+                    <p class="font-outfit text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+                        blanditiis rerum dicta incidunt suscipit esse labore in libero expedita asperiores?</p>
+                    <button
+                        class="bg-cyan-500 items-center flex justify-center w-full rounded-lg p-2 mt-4 font-semibold text-gray-800">Learn
+                        More <i class='bx w-3 h-3 ml-1 bx-right-arrow-alt'></i></button>
+                </div>
+            </div>
+            <div class="border rounded-xl lg:col-start-3 lg:row-start-1" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                <div
+                    class="aspect-[16/9] rounded-lg m-4 bg-[url('https://signage.uiowa.edu/sites/signage.uiowa.edu/files/slides/1920x1080.jpg')] bg-cover bg-center">
+
+                </div>
+                <div class="m-4">
+                    <div class="flex justify-between">
+                        <h1 class="font-outfit font-bold text-xl text-gray-200 ">Lorem, ipsum.</h1>
+                        <h1 class="font-outfit text-sm text-gray-500 ">11 November 2011</h1>
+                    </div>
+                    <p class="font-outfit text-gray-400">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe
+                        blanditiis rerum dicta incidunt suscipit esse labore in libero expedita asperiores?</p>
+                    <button
+                        class="bg-cyan-500 items-center flex justify-center w-full rounded-lg p-2 mt-4 font-semibold text-gray-800">Learn
+                        More <i class='bx w-3 h-3 ml-1 bx-right-arrow-alt'></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="m-5 md:ml-64 md:mr-20 " id="timeline">
+        <div class="font-outfit text-center">
+            <h1 class="text-gray-200 text-2xl font-bold">Timeline</h1>
+            <p class="text-gray-200">please see my timeline here</p>
+        </div>
+
+        <div class="max-w-2xl mt-4 font-outfit" data-aos="fade-up" data-aos-offset="300">
+            <div class="">
+                <ol
+                    class="relative border-l border-gray-700  md:grid md:grid-cols-3 md:justify-between md:grid-rows-1 md:gap-8">
+                    <li class="mb-10 ml-4 md:col-start-1 md:row-start-1 ">
+                        <div class="absolute w-3 h-3 rounded-full -left-1.5 border border-gray-900 bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-500">February
+                            2024</time>
+                        <h3 class="text-lg font-semibold text-white">High School
+                        </h3>
+                        <p class="mb-4 text-base font-normal text-gray-400">Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Culpa, necessitatibus. Mollitia inventore doloribus voluptatem expedita.
+                        </p>
+                        <a href="#"
+                            class="inline-flex items-center px-4 py-2 text-sm font-medium border rounded-lg focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 bg-gray-800 text-gray-400 border-gray-600 hover:text-white hover:bg-gray-700">Learn
+                            more <i class='bx w-3 h-3 ml-1 bx-right-arrow-alt'></i>
+                        </a>
+                    </li>
+                    <li class="mb-10 ml-4 md:col-start-2 md:row-start-1 ">
+                        <div class="absolute w-3 h-3 rounded-full -left-1.5 border border-gray-900 bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-500">March
+                            2024</time>
+                        <h3 class="text-lg font-semibold text-white">University</h3>
+                        <p class="text-base font-normal text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing
+                            elit. Dicta, doloremque maiores. Veritatis dolores minus eum.</p>
+                    </li>
+                    <li class="ml-4 md:col-start-3 md:row-start-1">
+                        <div class="absolute w-3 h-3 rounded-full -left-1.5 border border-gray-900 bg-gray-700">
+                        </div>
+                        <time class="mb-1 text-sm font-normal leading-none text-gray-500">April
+                            2024</time>
+                        <h3 class="text-lg font-semibold text-white">Jalan Hidup
+                        </h3>
+                        <p class="text-base font-normal text-gray-400">Lorem ipsum dolor sit amet, consectetur
+                            adipisicing
+                            elit. Qui labore ducimus in recusandae aliquam quos dolorem facere?</p>
+                    </li>
+                </ol>
+            </div>
+
+
+            </p>
+        </div>
+    </div>
+    <div class="m-5 font-outfit md:ml-64 md:mr-20" id="about">
+
+        <div class="text-center">
+            <h1 class="text-gray-200 text-2xl font-bold">About Me</h1>
+            <p class="text-gray-200">I hope you know me</p>
+        </div>
+        <div data-aos="fade-up" data-aos-offset="300">
+            <div class="mt-4 text-center">
+                <img src="src/img/avatar.png" class="blob w-32 h-32 mx-auto" alt="">
+                <h1 class="mt-3 font-bold text-gray-200 text-2xl md:text-4xl">Dwi Budi Fitri Adi</h1>
+                <div class="mt-2">
+                    <p class="text-xs md:text-base text-gray-200">@dwibudifitriadi | Indonesia </p>
+                </div>
+            </div>
+            <div class="mt-3 text-sm flex flex-wrap justify-center gap-2 text-gray-200">
+                <span class="border border-slate-300 font-bold rounded-full p-2 pl-3 pr-3 flex items-center">
+                    <i class="bx bx-current-location text-red-500 mr-2"></i> Indonesian
+                </span>
+                <span class="border border-slate-300 font-bold rounded-full p-2 pl-3 pr-3 flex items-center">
+                    <i class="bx bxl-html5 text-red-500 mr-2"></i> Front End Developer
+                </span>
+                <span class="border border-slate-300 font-bold rounded-full p-2 pl-3 pr-3 flex items-center">
+                    <i class="bx bx-coffee text-amber-900 mr-2"></i> Mentor
+                </span>
+                <span class="border border-slate-300 font-bold rounded-full p-2 pl-3 pr-3 flex items-center">
+                    <i class="bx bxs-magic-wand text-green-500 mr-2"></i> Visual Design
+                </span>
+            </div>
+            <p class="p-2 md:text-xl text-slate-400 ">I am a graduate of <span class="font-semibold">SMK
+                    Negeri 1 Cipeundeuy</span> majoring in <span class="font-semibold">Software Engineering</span> who
+                is
+                currently a <span class="font-semibold">high student</span> and <span class="font-semibold">conventional
+                    society</span> in general. Even though I look like a conventional person, I always want to
+                differentiate myself from others by continuing to explore knowledge wherever and whenever.</p>
+            <p class="p-2  text-slate-400">Interested in collaboration? <a href="mailto:dwibudipipitadi@gmail.com"
+                    class="text-sky-500 underline">just email now !</a></p>
+        </div>
+    </div>
+    <div class="font-outfit p-5 m-5 md:ml-64 md:mr-20">
+        <div class="flex items-center justify-center">
+            <div class="container mx-auto">
+                <div>
+                    <h2 class="text-xl font-semibold text-center mb-2 text-gray-200">Follow Me on Social Media</h2>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <a href="https://www.facebook.com/dwibudifitriadi"
+                            class="bg-blue-500 p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-facebook w-5 text-xl'></i>
+                        </a>
+
+                        <a href="https://www.instagram.com/dwibudifitriadi"
+                            class="bg-pink-600 p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-instagram w-5 text-xl'></i>
+                        </a>
+
+                        <a href="https://www.youtube.com/@dwibudifitriadi"
+                            class="bg-red-600 p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-youtube w-5 text-xl'></i>
+                        </a>
+
+                        <a href="https://www.github.com/dwibudifitriadi"
+                            class="bg-gray-700 p-2 font-semibold text-center text-white inline-flex items-center space-x-2 rounded">
+                            <i class='bx bxl-github w-5  fill-current text-xl'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h1 class="md:ml-64 md:mr-20 text-center font-monosans text-xs mb-20 mt-4 text-gray-400 ">&copy; 2024 Dwi Budi Fitri
+        Adi. All rights
+        reserved.</h1>
+    <script src="src/javascript.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
